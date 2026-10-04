@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Login -->
+     <form>
+      <div>
+        <label htmlFor="email">Email</label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Navbar -->
+     <nav className="flex bg-blue-950 text-white justify-between items-center px-6 py-3">
+            <h1 className="font-bold text-2xl">Chazha</h1>
+            <div className="flex gap-5">
+                <a className="hover:text-blue-400 hover:underline transition duration-300" href="">Home</a>
+                <a className="hover:text-blue-400 hover:underline transition duration-300" href="">Movies</a>
+                <a className="hover:text-blue-400 hover:underline transition duration-300" href="">Genres</a>
+                <a className="hover:text-blue-400 hover:underline transition duration-300" href="">Search</a>
+                <a className="hover:text-blue-400 hover:underline transition duration-300" href="">Login</a>
+            </div>
+        </nav>
+
+    <!-- Home -->
+     
+    <!-- Pagination -->
+     <div class="pagination"> <button>Previous</button> <button>1</button> <button>2</button> <button>3</button> <button>4</button> <button>5</button> <button>Next</button> </div>
+
+    <!-- Detail -->
+     <div class="movie-detail"> <img src="" alt="Movie Poster"> <div class="movie-info"> <h1>Movie Title</h1> <p>Genre</p> <p>Author</p> <p>Rating</p> <p>Synopsis</p> <button>Watch Trailer</button> </div> </div>
+    <!-- AddPage -->
+    <!-- Search -->
+     <div className='w-full max-w-2xl mx-auto h-12 rounded-lg shadow-md flex overflow-hidden'>
+          <input type="text" className='bg-gray-100 flex-1 px-5 border-1 border-gray-700 focus:border-blue-400' placeholder='Search movies...'/>
+          <button className='px-5 font-medium bg-blue-800 hover:bg-blue-400 transition duration-300'>Search</button>
+        </div>
+
+    <!-- Loading -->
+     <div class="loading"> <p>Loading...</p> </div>
+
+    <!-- Form -->
+     <form> <div> <label for="title">Title</label> <input type="text" id="title" name="title"> </div> <div> <label for="synopsis">Synopsis</label> <textarea id="synopsis" name="synopsis"></textarea> </div> <div> <label for="genre">Genre</label> <select id="genre" name="genre"> <option value="">Select Genre</option> </select> </div> <div> <label for="trailerUrl">Trailer URL</label> <input type="text" id="trailerUrl" name="trailerUrl"> </div> <div> <label for="imgUrl">Image URL</label> <input type="text" id="imgUrl" name="imgUrl"> </div> <div> <label for="rating">Rating</label> <input type="number" id="rating" name="rating"> </div> <button type="submit">Add Movie</button> </form>
+
+     <!-- Toastify -->
+      Toastify({
+  text: "Succeed Login",
+  duration: 3000,
+  newWindow: true,
+  close: true,
+  gravity: "bottom", // `top` or `bottom`
+  position: "right", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+  },
+}).showToast();
+
+Toastify({
+  text: error.response.data.message,
+  duration: 3000,
+  newWindow: true,
+  close: true,
+  gravity: "bottom", // `top` or `bottom`
+  position: "right", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+  },
+}).showToast();
+</body>
+</html>
+
+<!-- cari loading gif -->
