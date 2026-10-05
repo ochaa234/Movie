@@ -26,7 +26,7 @@ export default function Navbar() {
                 <NavLink className="hover:text-blue-400 hover:underline transition duration-300" to="">Genres</NavLink>
                 <NavLink className="hover:text-blue-400 hover:underline transition duration-300" to="">Search</NavLink>
                 <NavLink onClick={handleLogout} className="hover:text-blue-400 hover:underline transition duration-300">Logout</NavLink>
-                <NavLink className="hover:text-blue-400 hover:underline transition duration-300" to="/login">Login</NavLink>
+                <NavLink className="hover:text-blue-400 hover:underline transition duration-300" to="">Login</NavLink>
             </div>
         </nav>
         </>
